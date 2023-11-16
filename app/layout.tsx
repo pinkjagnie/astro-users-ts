@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   description: "AstroUsers - join us in outer space",
 };
 
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
 export default function RootLayout({
   children,
 }: {
@@ -16,7 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
